@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-from src.data import load_data
-from src.filters import render_filters, apply_filters
-from src.charts import plot_response_hist, plot_borough_bar
-from src.layouts import header_metrics, body_layout_tabs
+from data import load_data
+from filters import render_filters, apply_filters
+from charts import plot_response_hist, plot_borough_bar
+from layouts import header_metrics, body_layout_tabs
 
 
 # -----------------------------
@@ -27,7 +27,7 @@ def main() -> None:
     st.caption("Starter app for IMT 561 lab: layouts + filters + coordinated views.")
 
     # ✅ Data loading (cached)
-    df = load_data("data/sample.csv")
+    df = load_data("sample.csv")
 
     # -------------------------
     # TODO (DEMO): Add a quick 'data sanity' check
